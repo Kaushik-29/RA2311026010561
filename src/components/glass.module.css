@@ -1,0 +1,264 @@
+/* Calm glassmorphism — design tokens */
+.shell {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e6d3b3 0%, #cdded8 50%, #a8c1c1 100%);
+  font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 4vw, 2.5rem) clamp(1rem, 4vw, 1.5rem) 3rem;
+}
+
+.pageTitle {
+  font-size: clamp(1.75rem, 4vw, 2rem);
+  font-weight: 600;
+  color: #2f4f4f;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+/* ----- Tabs ----- */
+.tabsNav {
+  display: flex;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.tab {
+  position: relative;
+  padding: 0 2px 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #6b7280;
+  transition: color 0.25s ease;
+}
+
+.tab:hover {
+  color: #2f7d7d;
+}
+
+.tabActive {
+  color: #2f7d7d;
+}
+
+.tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #2f7d7d;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: center;
+}
+
+.tabActive::after {
+  transform: scaleX(1);
+}
+
+/* ----- Glass card (notification + empty + alert) ----- */
+.card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+  margin-bottom: clamp(12px, 2vw, 16px);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.cardHigh {
+  border-left: 3px solid rgba(47, 125, 125, 0.65);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04),
+    0 0 28px rgba(47, 125, 125, 0.1);
+}
+
+.cardHigh:hover {
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.06),
+    0 0 32px rgba(47, 125, 125, 0.12);
+}
+
+.cardAlert {
+  background: rgba(255, 252, 248, 0.82);
+  border-color: rgba(0, 0, 0, 0.06);
+  margin-bottom: 1rem;
+}
+
+.cardAlert:hover {
+  transform: translateY(-2px);
+}
+
+.emptyInner {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: clamp(0.5rem, 2vw, 1rem) 0;
+}
+
+/* ----- Notification card innards ----- */
+.rowTop {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.rowMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #2f7d7d;
+  color: #fff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1;
+  box-shadow: 0 2px 10px rgba(47, 125, 125, 0.28);
+}
+
+.category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #2f7d7d;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  font-weight: 600;
+  color: #2f4f4f;
+  margin: 0 0 0.5rem;
+  line-height: 1.45;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin: 0 0 1rem;
+  line-height: 1.55;
+}
+
+.rowBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.timestamp {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(47, 125, 125, 0.75);
+  flex-shrink: 0;
+}
+
+/* ----- Section (page intros) ----- */
+.section {
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.sectionTitle {
+  font-size: clamp(1.375rem, 3vw, 1.75rem);
+  font-weight: 600;
+  color: #2f4f4f;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.sectionLead {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin: 0 0 clamp(1.25rem, 3vw, 1.75rem);
+  max-width: 36rem;
+  line-height: 1.55;
+}
+
+/* ----- Loading ----- */
+.loadingWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 3rem 1rem;
+}
+
+.spinner {
+  width: 42px;
+  height: 42px;
+  border: 3px solid rgba(47, 125, 125, 0.2);
+  border-top-color: #2f7d7d;
+  border-radius: 50%;
+  animation: glassSpin 0.75s linear infinite;
+}
+
+@keyframes glassSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.emptyTitle {
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  font-weight: 600;
+  color: #2f4f4f;
+  margin: 0 0 0.5rem;
+}
+
+.emptySubtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.alertText {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #2f4f4f;
+  margin: 0;
+  line-height: 1.5;
+}
