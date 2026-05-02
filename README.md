@@ -5,7 +5,7 @@ A full-stack notification system with heap-based priority ranking, glassmorphism
 ## 📁 Project Structure
 
 ```
-shivayya/
+NOTIFICATION/
 ├── logging_middleware/          # Shared logging library (FE + BE)
 │   ├── logger.js
 │   ├── package.json
