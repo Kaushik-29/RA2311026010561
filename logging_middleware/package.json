@@ -1,0 +1,10 @@
+{
+  "name": "logging-middleware",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Shared logging middleware for frontend and backend stacks",
+  "main": "logger.js",
+  "dependencies": {
+    "axios": "^1.15.2"
+  }
+}

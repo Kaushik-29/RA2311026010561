@@ -1,9 +1,9 @@
 import { createElement as h, useEffect } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import AppLayout from './components/AppLayout.jsx'
-import GlassLayout from './components/GlassLayout.jsx'
-import AllNotificationsPage from './pages/AllNotificationsPage.jsx'
-import PriorityPage from './pages/PriorityPage.jsx'
+import AppLayout from './components/layout/AppLayout.jsx'
+import GlassLayout from './components/layout/GlassLayout.jsx'
+import AllNotificationsPage from './pages/notifications/AllNotificationsPage.jsx'
+import PriorityPage from './pages/notifications/PriorityPage.jsx'
 import { Log } from './utils/logger.js'
 import './App.css'
 

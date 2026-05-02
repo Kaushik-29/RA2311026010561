@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import { fetchNotifications } from '../api/notifications.js'
-import { Log } from '../utils/logger.js'
-import NotificationTabs from './NotificationTabs.jsx'
-import styles from './glass.module.css'
+import { fetchNotifications } from '../../services/notifications.js'
+import { Log } from '../../utils/logger.js'
+import NotificationTabs from '../notifications/NotificationTabs.jsx'
+import styles from '../styles/glass.module.css'
 
 export default function AppLayout() {
   const [raw, setRaw] = useState([])

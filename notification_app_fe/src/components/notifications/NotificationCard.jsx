@@ -1,4 +1,4 @@
-import styles from './glass.module.css'
+import styles from '../styles/glass.module.css'
 
 /**
  * @typedef {'high' | 'medium' | 'low'} PriorityTier

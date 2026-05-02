@@ -1,6 +1,6 @@
 import { useOutletContext } from 'react-router-dom'
-import Notifications from '../components/Notifications.jsx'
-import styles from '../components/glass.module.css'
+import Notifications from '../../components/notifications/Notifications.jsx'
+import styles from '../../components/styles/glass.module.css'
 
 export default function AllNotificationsPage() {
   const { raw, loading, loadError } = useOutletContext()

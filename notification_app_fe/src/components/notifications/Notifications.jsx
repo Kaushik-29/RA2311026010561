@@ -1,16 +1,16 @@
 import { useEffect, useMemo, useState } from 'react'
-import { fetchNotifications } from '../api/notifications.js'
-import { Log } from '../utils/logger.js'
+import { fetchNotifications } from '../../services/notifications.js'
+import { Log } from '../../utils/logger.js'
 import {
   getNotificationType,
   selectTopN,
   sortAllByPriority,
-} from '../utils/priority.js'
-import { getNotificationContent } from '../utils/notificationContent.js'
-import { getPriorityTier } from '../utils/priorityTier.js'
+} from '../../utils/priority.js'
+import { getNotificationContent } from '../../utils/notificationContent.js'
+import { getPriorityTier } from '../../utils/priorityTier.js'
 import NotificationCard from './NotificationCard.jsx'
 import NotificationsEmptyState from './NotificationsEmptyState.jsx'
-import styles from './glass.module.css'
+import styles from '../styles/glass.module.css'
 
 const DEFAULT_TOP_N = 10
 

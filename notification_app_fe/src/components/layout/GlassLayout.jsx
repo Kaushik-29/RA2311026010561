@@ -1,4 +1,4 @@
-import styles from './glass.module.css'
+import styles from '../styles/glass.module.css'
 
 /**
  * Full-viewport gradient shell + centered content column.

@@ -1,4 +1,4 @@
-import styles from './glass.module.css'
+import styles from '../styles/glass.module.css'
 
 export default function NotificationsEmptyState() {
   return (

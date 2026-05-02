@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import styles from './glass.module.css'
+import styles from '../styles/glass.module.css'
 
 /**
  * Minimal routed tabs: Top Priority | All Notifications
