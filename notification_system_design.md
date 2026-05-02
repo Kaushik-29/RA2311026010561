@@ -63,7 +63,7 @@ We built a **full-stack notification platform** that:
 ### Monorepo Layout
 
 ```
-shivayya/
+NOTIFICATION/
 ├── logging_middleware/         # Shared logging library (used by FE + BE)
 ├── notification_app_fe/        # React + Vite frontend
 ├── notification_app_be/        # Node.js + Express backend
